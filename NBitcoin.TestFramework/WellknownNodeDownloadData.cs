@@ -530,6 +530,36 @@ namespace NBitcoin.Tests
 			};
 		}
 
+		public class NewYorkCoinNodeDownloadData
+		{
+			public NodeDownloadData v1_10_0 = new NodeDownloadData()
+			{
+				Version = "1.10.0",
+				Windows = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/NewYorkCoinNYC/newyorkcoin/releases/download/v{0}/newyorkcoin-{0}-win64.zip",
+					Archive = "newyorkcoin-{0}-win64.zip",
+					Executable = "newyorkcoin-{0}/bin/newyorkcoind.exe",
+					Hash = "#"
+				},
+				Linux = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/NewYorkCoinNYC/newyorkcoin/releases/download/v{0}/newyorkcoin-{0}-linux64.tar.gz",
+					Archive = "newyorkcoin-{0}-linux64.tar.gz",
+					Executable = "newyorkcoin-{0}/bin/newyorkcoind",
+					Hash = "#"
+				},
+				Mac = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/NewYorkCoinNYC/newyorkcoin/releases/download/v{0}/newyorkcoin-{0}-osx-signed.dmg",
+					Archive = "newyorkcoin-{0}-osx64.tar.gz",
+					Executable = "newyorkcoin-{0}/bin/newyorkcoinnd",
+					Hash = "#"
+				},
+				SupportCookieFile = false
+			};
+		}
+
 		public class DashNodeDownloadData
 		{
 			public NodeDownloadData v0_13_0 = new NodeDownloadData()
